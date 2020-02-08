@@ -1,4 +1,4 @@
-# funzt.cool-ui
+# zeltlager-registration
 
 This repository is for the frontend of `https://zeltlager.schiffer.dev`. It can be deployed as an docker container.
 
