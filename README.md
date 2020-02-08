@@ -1,27 +1,26 @@
-# ZeltlagerRegistration
+# funzt.cool-ui
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.1.
+This repository is for the frontend of `https://zeltlager.schiffer.dev`. It can be deployed as an docker container.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run `npm run start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run `npm run build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## Docker
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `docker-compose up -d` to run a docker image.
 
-## Running end-to-end tests
+If you want to build it fresh run `docker-compose up --build -d`.
+The container that will be available over `http://localhost:80`.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## What have I learned?
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- dockerize an angular frontend
+- write a Dockerfile with a multistage build
+- configure nginx to host an angular application
+- setup docker on a server
+- deploy the docker container on a server

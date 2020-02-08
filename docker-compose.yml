@@ -1,0 +1,10 @@
+version: "3.3"
+
+services:
+  zeltlager-registration:
+    hostname: localhost
+    container_name: zeltlager-registration
+    build: .
+    ports:
+      - 80:80
+      - 443:443

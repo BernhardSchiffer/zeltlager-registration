@@ -1,0 +1,394 @@
+:host
+{
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header
+{
+   height: 100vh;
+}
+
+.landingimg
+{
+   height: 100%;
+   background-image: url("../../pictures/Bild1.jpg");
+   background-color: lightgray;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   filter: brightness(0.8);
+}
+
+#confettiCanon1, #confettiCanon2
+{
+   position: fixed;
+   bottom: 0;
+   height: 0;
+   z-index: 9000;
+}
+
+#confettiCanon1
+{
+   left: 10vw;
+}
+
+#confettiCanon2
+{
+   right: 10vw;
+}
+
+main
+{
+   position: relative;
+   width: 70%;
+   margin: auto;
+   align-content: center;
+   margin-bottom: 50px;
+   color: var(--black);
+   background-color: var(--white);
+}
+
+.text p
+{
+   max-width: 60rem;
+   width: 90%;
+   margin: auto;
+   font-size: 1.1rem;
+   margin-bottom: 1.5rem;
+}
+
+section
+{
+   margin-top: 70px;
+}
+
+section h1
+{
+   font-size: 2.5rem;
+   margin-bottom: 10px !important;
+}
+
+.text h1
+{
+   max-width: 65rem;
+   margin: auto;
+}
+
+.landing
+{
+   width: 100%;
+   position: absolute;
+   top: 70vh;
+   text-align: center;
+}
+
+.landing button
+{
+   font-size: 2.5rem;
+   height: 100px;
+   width: auto;
+   background-color: var(--submit);
+   color: var(--white);
+   padding: 14px 50px;
+   border: none;
+   border-radius: 50px;
+   cursor: pointer;
+   text-align: center;
+}
+
+.landing button:hover
+{
+   background-color: var(--submit-hover);
+}
+
+.landingh1
+{
+   color: white;
+   width: 100%;
+   position: absolute;
+   top: 20vh;
+   margin: 0;
+   font-size: 9rem;	
+   text-align: center;
+}
+
+#map
+{
+   max-width: 60rem;
+   width: 90%;
+   height: 400px;
+   margin-left: auto;
+   margin-right: auto;
+   margin-bottom: 30px;
+   margin-top: 30px;
+   background-color: #eee;
+}
+
+.accordion
+{
+   max-width: 60rem;
+   width: 90%;
+   background-color: #eee;
+   cursor: pointer;
+   padding: 18px;
+   text-align: left;
+   border: none;
+   outline: none;
+   transition: 0.5s;
+   margin: 0;
+   margin-left: auto;
+   margin-right: auto;
+   display: block;
+   font-size: 1.5rem;
+}
+
+#faq button
+{
+   color: var(--black);
+   border-radius: 0;
+}
+
+#faq button:first-of-type
+{
+   border-top-left-radius: 5px;
+   border-top-right-radius: 5px;
+}
+
+#faq button:last-of-type
+{
+   border-bottom-left-radius: 5px;
+   border-bottom-right-radius: 5px;
+}
+
+.active, .accordion:hover
+{
+   background-color: lightgray;
+}
+
+.panel
+{
+   max-width: 60rem;
+   width: 100%;
+   background-color: var(--white);
+   display: none;
+   overflow: hidden;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.panel.active
+{
+   display: block;
+}
+
+.panel p
+{
+   padding: 20px;
+   margin: auto
+}
+
+form
+{
+   position: relative;
+   background-color: lightgray;
+   border-radius: 5px;
+   margin-bottom: 10px;
+   margin-left: auto;
+   margin-right: auto;
+   padding: 20px;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-column-gap: 3vw;
+   grid-row-gap: 2vh;
+}
+
+form label
+{
+   display: block;
+}
+
+.firsthalfgrid
+{
+   grid-column: 1 / 3;
+}
+
+.secondhalfgrid
+{
+   grid-column: 3 / 5;
+}
+
+.grid-start
+{
+   grid-column: 1 / 2;
+}
+
+.fullgrid
+{
+   grid-column: 1 / 5;
+}
+
+input[type=number]
+{
+   width: auto;
+}
+
+.bold
+{
+   font-weight: bold;
+}
+
+.optional
+{
+   font-style: italic;
+   font-size: 0.8rem;
+   margin-left: 15px;
+}
+
+.hint-text
+{
+   display: none;
+   position: relative;
+   left: 5%;
+   max-width: 90%;
+   font-size: 0.8rem;
+   color: var(--delete-hover);
+   max-height: 0rem;
+}
+
+input.ng-invalid + .hint-text
+{
+   display: block;
+   opacity: 1;
+}
+
+input[type=text],
+input[type=email],
+input[type=date],
+input[type=tel]
+{
+   padding-right: 3rem; 
+   background-repeat: no-repeat;
+   background-position: 98% 50%;
+   background-size: 2rem;
+   background-image: none;
+   outline: none;
+}
+
+input[type=text].ng-valid,
+input[type=email].ng-valid,
+input[type=date].ng-valid,
+input[type=tel].ng-valid
+{
+   background-image: url('../../icons/check.svg');
+   outline-color: var(--submit-hover);
+   outline-style: solid;
+   -moz-outline-radius: 4px;
+   outline-width: 1px;
+}
+
+input[type=text].ng-invalid.ng-touched,
+input[type=email].ng-invalid.ng-touched,
+input[type=date].ng-invalid.ng-touched,
+input[type=tel].ng-invalid.ng-touched
+{
+   background-image: url('../../icons/cross.svg');
+   outline-color: var(--delete-hover);
+   outline-style: solid;
+   -moz-outline-radius: 4px;
+   outline-width: 1px;
+}
+
+input[type=number].ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched
+{
+   outline-color: var(--delete-hover);
+   outline-style: solid;
+   -moz-outline-radius: 4px;
+   outline-width: 1px;
+}
+
+textarea.ng-valid.ng-touched
+{
+   outline-color: var(--submit-hover);
+   outline-style: solid;
+   -moz-outline-radius: 4px;
+   outline-width: 1px;
+}
+
+/*
+input[type=text].ng-invalid:focus,
+input[type=email].ng-invalid:focus,
+input[type=date].ng-invalid:focus,
+input[type=tel].ng-invalid:focus
+{
+   background-image: none;
+   outline: none;
+}
+*/
+@media screen and (max-width: 1200px)
+{
+   .landing button
+   {
+      font-size: 1.5rem;
+      height: 60px;
+      border-radius: 30px;
+   }
+
+   .landingh1
+   {
+      top: 20vh;
+      font-size: 4rem;
+   }
+
+   main
+   {
+      width: 90%;
+   }
+
+   form
+   {
+      width: auto;
+   }
+}
+
+@media screen and (max-width: 700px)
+{
+   .landing button
+   {
+      font-size: 1.2rem;
+      height: 50px;
+      border-radius: 25px;
+   }
+
+   .landingh1
+   {
+      top: 20vh;
+      font-size: 4rem;
+   }
+
+   main
+   {
+      width: 90%;
+   }
+
+   form
+   {
+      grid-template-columns: 1fr;
+      width: auto;
+   }
+
+   .firsthalfgrid
+   {
+      grid-column: 1 / 2;
+   }
+
+   .secondhalfgrid
+   {
+      grid-column: 1 / 2;
+   }
+
+   .fullgrid
+   {
+      grid-column: 1 / 2;
+   }
+}
