@@ -193,7 +193,7 @@ export class ZeltlagerComponent implements OnInit {
     let myForm: HTMLFormElement = document.forms["registrationForm"];
     let registrierung: Registration = await new Registration(formData);
 
-    fetch("/api/registration", {
+    fetch("/registration", {
       method: "POST",
       headers: {
         Accept: "application/json",
