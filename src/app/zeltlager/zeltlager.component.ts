@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import { environment } from "../../environments/environment";
 import { Registration } from "../models/Registration";
 import { Question } from "../models/Question";
 import { confetti } from "dom-confetti";
@@ -10,6 +11,9 @@ import { confetti } from "dom-confetti";
   styleUrls: ["./zeltlager.component.css"]
 })
 export class ZeltlagerComponent implements OnInit {
+
+  baseUrl: string = environment.backendBaseUrl;
+
   registrationForm: FormGroup;
   formData: any;
   firstname: string;
@@ -193,7 +197,7 @@ export class ZeltlagerComponent implements OnInit {
     let myForm: HTMLFormElement = document.forms["registrationForm"];
     let registrierung: Registration = await new Registration(formData);
 
-    fetch("/registration", {
+    fetch(this.baseUrl + "/registration", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -216,7 +220,7 @@ export class ZeltlagerComponent implements OnInit {
     let myForm: HTMLFormElement = document.forms["questionForm"];
     let question = await new Question(formData);
 
-    let res = await fetch("http://localhost:81/api/question/zeltlager", {
+    let res = await fetch(this.baseUrl + "/forms/zeltlager", {
       credentials: "same-origin",
       method: "POST",
       mode: "cors",
